@@ -49,22 +49,17 @@ public class LinkedList {
     }
 
     /*--------------------------------------------------------------------------------------------*/
-    public int size() 
-    {
-        return size;
-    }
-    /*--------------------------------------------------------------------------------------------*/
     public void addInOrder(int val) {
 
         int index = 0;
         int last = 0;
         boolean found = false;
 
-        if (size() == 0) {
+        if (size == 0) {
             add(val, 1);
         } else {
 
-            for (int i = 1; i <= size(); i++) {
+            for (int i = 1; i <= size; i++) {
 
                 int temp = (int) get(i);
 
@@ -77,8 +72,7 @@ public class LinkedList {
             }
             
             if(found) add(val, index);
-            else add(val, last+1);
-            
+            else add(val, last+1);      
         }
     }
     /*--------------------------------------------------------------------------------------------*/

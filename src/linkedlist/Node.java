@@ -1,5 +1,8 @@
 package linkedlist;
-
+/**
+ * 
+ * @author Kevin Duraj
+ */
     public class Node {
 
         Node next;
