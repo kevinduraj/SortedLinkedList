@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * @author Kevin Duraj
  * Store LinkedList in sorted order
+ * Order of Complexity = O(n)
  */
 public class App {
 
@@ -27,7 +28,7 @@ public class App {
         System.out.println("------------------------------------");
         System.out.print("output linked list = ");
         
-        for (int i = 1; i <= list.size(); i++) {
+        for (int i = 1; i <= list.getSize(); i++) {
             System.out.print(list.get(i) + " ");
         }
 

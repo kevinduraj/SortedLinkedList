@@ -3,6 +3,7 @@ package linkedlist;
 /**
  * @author Kevin Duraj
  * Store LinkedList in sorted order
+ * Order of Complexity = O(n)
  */
 public class LinkedList {
 
@@ -14,6 +15,10 @@ public class LinkedList {
 
         head = new Node(null);
         size = 0;
+    }
+    /*--------------------------------------------------------------------------------------------*/   
+    public int getSize() {
+        return size;
     }
     /*--------------------------------------------------------------------------------------------*/
     public void add(Object data, int index) 

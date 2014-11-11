@@ -2,6 +2,7 @@ package linkedlist;
 /**
  * 
  * @author Kevin Duraj
+ * Single LinkedList Node
  */
     public class Node {
 
