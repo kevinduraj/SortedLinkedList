@@ -1,7 +1,10 @@
-package linkedlistindex;
+package linkedlist;
 
+/**
+ * @author Kevin Duraj
+ * Store LinkedList in sorted order
+ */
 public class LinkedList {
-
 
     private Node head;
     private int size;
@@ -49,6 +52,34 @@ public class LinkedList {
     public int size() 
     {
         return size;
+    }
+    /*--------------------------------------------------------------------------------------------*/
+    public void addInOrder(int val) {
+
+        int index = 0;
+        int last = 0;
+        boolean found = false;
+
+        if (size() == 0) {
+            add(val, 1);
+        } else {
+
+            for (int i = 1; i <= size(); i++) {
+
+                int temp = (int) get(i);
+
+                if (val < temp) {
+                    index = i;
+                    found = true;
+                    break;
+                } 
+                last=i;
+            }
+            
+            if(found) add(val, index);
+            else add(val, last+1);
+            
+        }
     }
     /*--------------------------------------------------------------------------------------------*/
 }
