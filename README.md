@@ -8,5 +8,6 @@ input array2 = [2, 8, 1]
 output linked list = 0 1 1 2 3 5 8 
 
 ```
-* Written by: Kevin Duraj
+* Order of Complexity = O(n)
+  * Written by: Kevin Duraj
 
