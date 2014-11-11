@@ -31,14 +31,14 @@ public class LinkedList {
 
     public void add(Object data, int index) {
         Node temp = new Node(data);
-        Node current = head;
+        Node node = head;
 
-        for (int i = 1; i < index && current.getNext() != null; i++) {
-            current = current.getNext();
+        for (int i = 1; i < index && node.getNext() != null; i++) {
+            node = node.getNext();
         }
 
-        temp.setNext(current.getNext());
-        current.setNext(temp);
+        temp.setNext(node.getNext());
+        node.setNext(temp);
         size++;
     }
 
@@ -50,15 +50,15 @@ public class LinkedList {
             return null;
         }
 
-        Node current = head.getNext();
+        Node node = head.getNext();
         for (int i = 1; i < index; i++) {
-            if (current.getNext() == null) {
+            if (node.getNext() == null) {
                 return null;
             }
 
-            current = current.getNext();
+            node = node.getNext();
         }
-        return current.getData();
+        return node.getData();
     }
 
     /*--------------------------------------------------------------------------------------------
@@ -97,14 +97,14 @@ public class LinkedList {
      Remove Node from LinkedList based on index
      */
 
-    public void remove(int pos) {
+    public void remove(int index) {
 
-        if (pos == 1) {
+        if (index == 1) {
             head = head.getNext();
             size--;
             return;
         }
-        if (pos == size) {
+        if (index == size) {
             Node ptr = head;
 
             for (int i = 1; i < size - 1; i++) {
@@ -116,16 +116,16 @@ public class LinkedList {
             return;
         }
 
-        Node ptr = head;
-        pos = pos - 1;
+        Node curent = head;
+        index = index - 1;
         for (int i = 1; i < size - 1; i++) {
-            if (i == pos) {
-                Node tmp = ptr.getNext();
+            if (i == index) {
+                Node tmp = curent.getNext();
                 tmp = tmp.getNext();
-                ptr.setNext(tmp);
+                curent.setNext(tmp);
                 break;
             }
-            ptr = ptr.getNext();
+            curent = curent.getNext();
         }
         size--;
     }
