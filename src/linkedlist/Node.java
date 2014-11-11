@@ -1,8 +1,7 @@
 package linkedlist;
 /**
- * 
- * @author Kevin Duraj
- * Single LinkedList Node
+ * @author Kevin Duraj 
+ * @DataStructure  LinkedList  
  */
     public class Node {
 
